@@ -1,3 +1,5 @@
+import { montserrat } from './ui/fonts';
+import './ui/global.css'
 export default function RootLayout({
   children,
 }: {
@@ -5,9 +7,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        Hello World
+      <body className={`${montserrat.className} antialiased`}>
         {children}
+        <footer className='py-10 flex justify-center items-center'>
+          Hecho por Miguel Angel
+        </footer>
       </body>
     </html>
   );
